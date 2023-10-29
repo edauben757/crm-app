@@ -1,0 +1,80 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.row-layout {
+  display: flex;
+}
+.group {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-height: 50px;
+  flex-grow: 1;
+}
+.group_1 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 5px;
+}
+.tabs {
+  min-width: 0;
+  min-height: 0;
+}
+.tab-item {
+  min-width: 100%;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.column-inbox-layout {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.connect-navigation {
+  min-width: min-content;
+  min-height: 0;
+  flex-shrink: 0;
+}
+.tab-item-content {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  overflow: auto;
+  height: 100%;
+  min-width: 100%;
+  min-height: 50px;
+}
+.button {
+  width: max-content;
+  height: max-content;
+}
+.avatar {
+  --igx-avatar-background: transparent;
+}
+.list {
+  height: max-content;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.list_1 {
+  height: max-content;
+}
+.list_2 {
+  position: relative;
+  height: max-content;
+}

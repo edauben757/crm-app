@@ -1,0 +1,31 @@
+<div class="row-layout group">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="900" width="285px" class="communication-navigation">
+    <ng-template igxDrawer>
+      <div class="row-layout group_1">
+        <button igxButton="fab" igxRipple class="button">
+          <igx-icon>
+            add
+          </igx-icon>
+          <span>Compose</span>
+        </button>
+      </div>
+      <igx-tabs [disableAnimation]="true" class="tabs">
+        <igx-tab-item [selected]="true" class="tab-item">
+          <igx-tab-header>
+            <span igxTabHeaderLabel>Open</span>
+          </igx-tab-header>
+          <igx-tab-content class="row-layout tab-item-content">
+            <igx-list class="list">
+              <igx-list-item [isHeader]="false" *ngFor="let item of conversationsDataGetConversations">
+                <span igxListThumbnail>
+                  <igx-avatar initials="AB" shape="circle" routerLink="/main/home" class="avatar"></igx-avatar>
+                </span>
+                <span igxListLineTitle>{{ item.message }}</span>
+              </igx-list-item>
+            </igx-list>
+          </igx-tab-content>
+        </igx-tab-item>
+      </igx-tabs>
+    </ng-template>
+  </igx-nav-drawer>
+</div>

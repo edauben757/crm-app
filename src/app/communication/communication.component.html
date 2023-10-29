@@ -1,0 +1,110 @@
+<div class="row-layout group">
+  <div igxToggleAction="connectNavigation" class="row-layout group_1">
+    <igx-icon class="icon">
+      menu
+    </igx-icon>
+  </div>
+  <igx-navbar class="navbar">
+    <igx-navbar-title class="navbar-content">
+      <p class="text">
+        Test CRM
+      </p>
+    </igx-navbar-title>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        search
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        settings
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        notifications_none
+      </igx-icon>
+    </button>
+  </igx-navbar>
+</div>
+<div class="row-layout group_2">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="900" width="200px" #connectNavigation class="connect-navigation">
+    <ng-template igxDrawer>
+      <igx-list class="list">
+        <igx-list-item [isHeader]="false" routerLink="/main/home">
+          <span igxListThumbnail>
+            <igx-avatar shape="circle" routerLink="/main/home" class="avatar">
+              <igx-icon>
+                arrow_back
+              </igx-icon>
+            </igx-avatar>
+          </span>
+          <span igxListLineTitle>Back</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/communication/dashboard">
+          <span igxListThumbnail>
+            <igx-avatar shape="circle" routerLink="/main/home" class="avatar">
+              <igx-icon>
+                grid_view
+              </igx-icon>
+            </igx-avatar>
+          </span>
+          <span igxListLineTitle>Dashboard</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/communication/conversation">
+          <span igxListThumbnail>
+            <igx-avatar shape="circle" class="avatar">
+              <igx-icon>
+                sms
+              </igx-icon>
+            </igx-avatar>
+          </span>
+          <span igxListLineTitle>Conversations</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/communication/email">
+          <span igxListThumbnail>
+            <igx-avatar shape="circle" class="avatar">
+              <igx-icon>
+                email
+              </igx-icon>
+            </igx-avatar>
+          </span>
+          <span igxListLineTitle>Email</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/communication/notification">
+          <span igxListThumbnail>
+            <igx-avatar shape="circle" class="avatar">
+              <igx-icon>
+                mobile_screen_share
+              </igx-icon>
+            </igx-avatar>
+          </span>
+          <span igxListLineTitle>Mobile Push</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/communication/call">
+          <span igxListThumbnail>
+            <igx-avatar shape="circle" class="avatar">
+              <igx-icon>
+                call
+              </igx-icon>
+            </igx-avatar>
+          </span>
+          <span igxListLineTitle>Call</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/communication/settings">
+          <span igxListThumbnail>
+            <igx-avatar shape="circle" class="avatar">
+              <igx-icon>
+                settings
+              </igx-icon>
+            </igx-avatar>
+          </span>
+          <span igxListLineTitle>Settings</span>
+        </igx-list-item>
+      </igx-list>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
